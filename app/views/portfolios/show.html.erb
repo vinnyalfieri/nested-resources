@@ -1,5 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<h1> <%= @portfolio.name %></h1>
-<%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
-<%= link_to 'Back', portfolios_path %>
+<p id="notice">
+  <%= notice %>
+</p>
+<p>
+  <h1> 
+    <%= @portfolio.name %>
+</h1>
+</p>
+<!-- This is the link to the add a project related to the portfolio!
+  EXCEPT THE URL IS NOT CORRECT!
+ -->
+<%= link_to("Add Project", "portfolio/1/projects/new") %>
+<p>
+  <%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
+  <%= link_to 'Back', portfolios_path %>
+</p>

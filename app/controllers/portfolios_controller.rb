@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-
+  
   # GET /portfolios
   # GET /portfolios.json
   def index
@@ -9,6 +9,7 @@ class PortfoliosController < ApplicationController
   # GET /portfolios/1
   # GET /portfolios/1.json
   def show
+    @portfolio = Portfolio.find(params[:id])
   end
 
   # GET /portfolios/new
@@ -18,6 +19,7 @@ class PortfoliosController < ApplicationController
 
   # GET /portfolios/1/edit
   def edit
+    @portfolio = Portfolio.find(params[:id])
   end
 
   # POST /portfolios
