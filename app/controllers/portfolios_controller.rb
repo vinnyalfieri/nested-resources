@@ -1,5 +1,4 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
 
   # GET /portfolios
   # GET /portfolios.json
@@ -62,9 +61,6 @@ class PortfoliosController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_portfolio
-      @portfolio = Portfolio.find(params[:id])
-    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def portfolio_params
